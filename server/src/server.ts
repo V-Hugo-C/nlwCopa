@@ -12,7 +12,7 @@ async function bootstrap() {
         logger:true,
 
     })
-    fastify.get('/pools/ count', async () => {
+    fastify.get('/pools/count', async () => {
 
         const count = await prisma.pool.count()
 
@@ -21,7 +21,7 @@ async function bootstrap() {
     })
 
 
-    await fastify.listen({ port: 3333})
+    await fastify.listen({ port: 3333 })
 }
 
 bootstrap()
